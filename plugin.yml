@@ -1,0 +1,16 @@
+name: SirksRatingPlugin
+main: com.gmail.sirknightingfail.rating.RatingPlugin
+version: 0.0.1
+commands:
+  pvprank:
+    description: Base command for the rating plugin
+    usage: /<command> <help|top|stats|exchange|reload> [arguments]
+    permission: pvprank.use
+    permission-message: You Are not allowed to view pvprank stats.
+permissions:
+  pvprank.use:
+    default: true
+    description: Used to look at the pvprank stats
+  pvprank.reload:
+    default: false
+    description: reloads the configuration for pvprank from the disc

@@ -1,0 +1,7 @@
+#Do Not Change the tourneyScore, changed, or rank values.
+#If you change an individual's score, add their EXACT username to the changed list.
+#Then, go /pvprank reload
+#This does not reload the whole plugin. it just reloads the configuration.
+changed:
+  -
+players:

@@ -1,0 +1,657 @@
+####################################################
+# This is the configuration for the ranking plugin.#
+# Do not modify this top section or modify section.#
+# you did not create. This is a work in progress.  #
+# You have to go /pvprank reload to have the change#
+# You make applied. The players are refused to as  #
+# a winner if they killed the loser.               #
+####################################################
+
+#The first section of configuration has to do with the initial rating of a new player (Higher numbers are more accurate.)
+initialScore: 800
+
+#Make this next value the difference of ratings for which skill increases by 10 (Best at half the initial)
+exponentDiff: 400
+
+#This value is pretty self explanatory, It is the floor score, which players cannot go below. (beating them gets you nothing)
+floorScore: 100
+
+#This following value determines how much a player scores if they win.
+#If they are equally matched, the winner gets half of this from the loser.
+standardDiffMatch: 32
+
+#The next value is the time between updates of the ranks, in seconds. <This does not work yet>
+rankUpdateFrequency: 600
+
+#The next value is for whether the plugin counts kills from being lit on fire as the most reason person to light on fire, fall damage from the knocker.
+detectIndirectKills: false
+
+#the Next part of the configuration is the multiplier section.
+#The winner's winnings are multiplied by all the apply-able multipliers. (If the person has it, it is applied)
+#You can set these if you want. 
+winner:
+  sword:
+    enchants:
+      sharpness:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        5: 1
+        6: 1
+        7: 1
+        8: 1
+        9: 1
+        other: 1
+      bane:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        5: 1
+        other: 1
+      smite:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        5: 1
+        other: 1
+      knockback:
+        1: 1
+        2: 1
+        other: 1
+      fire:
+        1: 1
+        2: 1
+        other: 1
+      looting:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+      unbreaking:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+    material:
+      diamond: 1
+      gold: 1
+      iron: 1
+      wood: 1
+      stone: 1
+  bow:
+    enchants:
+      punch:
+        1: 1
+        2: 1
+        other: 1
+      power:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        5: 1
+        other: 1
+      flame:
+        1: 1
+        other: 1
+      infinity:
+        1: 1
+        other: 1
+      unbreaking:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+  helmet:
+    enchants:
+      unbreaking:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+      protection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      fireprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      blastprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      projectileprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      respiration:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+      aqua affinity:
+        1: 1
+        other: 1
+      thorns:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+    material:
+      diamond: 1
+      chain: 1
+      gold: 1
+      iron: 1
+      leather: 1
+  chestPlate:
+    enchants:
+      unbreaking:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+      protection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      fireprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      blastprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      projectileprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      thorns:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+    material:
+      diamond: 1
+      chain: 1
+      gold: 1
+      iron: 1
+      leather: 1
+  leggings:
+    enchants:
+      unbreaking:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+      protection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      fireprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      blastprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      projectileprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      thorns:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+    material:
+      diamond: 1
+      chain: 1
+      gold: 1
+      iron: 1
+      leather: 1
+  boots:
+    enchants:
+      unbreaking:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+      protection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      fireprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      blastprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      projectileprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      featherfalling:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      thorns:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+    material:
+      diamond: 1
+      chain: 1
+      gold: 1
+      iron: 1
+      leather: 1
+  effects:
+    poison:
+      1: 1
+      2: 1
+      other: 1
+    strength:
+      1: 1
+      2: 1
+      other: 1
+    resistance:
+      1: 1
+      2: 1
+      3: 1
+      4: 1
+      other: 1
+    jump:
+      1: 1
+      2: 1
+      other: 1
+    confusion:
+      1: 1
+      other: 1
+    hunger:
+      1: 1
+      other: 1
+    invisibility:
+      1: 1
+      other: 1
+    night_vision:
+      1: 1
+      other: 1
+    regeneration:
+      1: 1
+      2: 1
+      3: 1
+      4: 1
+      other: 1
+    slow:
+      1: 1
+      2: 1
+      other: 1
+    speed:
+      1: 1
+      2: 1
+      other: 1
+    weakness:
+      1: 1
+      2: 1
+      other: 1
+    fire_resistance:
+      1: 1
+      other: 1
+    blindness:
+      1: 1
+      other: 1
+loser:
+  sword:
+    enchants:
+      sharpness:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        5: 1
+        6: 1
+        7: 1
+        8: 1
+        9: 1
+        other: 1
+      bane:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        5: 1
+        other: 1
+      smite:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        5: 1
+        other: 1
+      knockback:
+        1: 1
+        2: 1
+        other: 1
+      fire:
+        1: 1
+        2: 1
+        other: 1
+      looting:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+      unbreaking:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+    material:
+      diamond: 1
+      gold: 1
+      iron: 1
+      wood: 1
+      stone: 1
+  bow:
+    enchants:
+      punch:
+        1: 1
+        2: 1
+        other: 1
+      power:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        5: 1
+        other: 1
+      flame:
+        1: 1
+        other: 1
+      infinity:
+        1: 1
+        other: 1
+      unbreaking:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+  helmet:
+    enchants:
+      unbreaking:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+      protection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      fireprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      blastprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      projectileprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      respiration:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+      aqua affinity:
+        1: 1
+        other: 1
+      thorns:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+    material:
+      diamond: 1
+      chain: 1
+      gold: 1
+      iron: 1
+      leather: 1
+  chestPlate:
+    enchants:
+      unbreaking:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+      protection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      fireprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      blastprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      projectileprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      thorns:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+    material:
+      diamond: 1
+      chain: 1
+      gold: 1
+      iron: 1
+      leather: 1
+  leggings:
+    enchants:
+      unbreaking:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+      protection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      fireprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      blastprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      projectileprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      thorns:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+    material:
+      diamond: 1
+      chain: 1
+      gold: 1
+      iron: 1
+      leather: 1
+  boots:
+    enchants:
+      unbreaking:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+      protection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      fireprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      blastprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      projectileprotection:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      featherfalling:
+        1: 1
+        2: 1
+        3: 1
+        4: 1
+        other: 1
+      thorns:
+        1: 1
+        2: 1
+        3: 1
+        other: 1
+    material:
+      diamond: 1
+      chain: 1
+      gold: 1
+      iron: 1
+      leather: 1
+  effects:
+    poison:
+      1: 1
+      2: 1
+      other: 1
+    strength:
+      1: 1
+      2: 1
+      other: 1
+    resistance:
+      1: 1
+      2: 1
+      3: 1
+      4: 1
+      other: 1
+    jump:
+      1: 1
+      2: 1
+      other: 1
+    confusion:
+      1: 1
+      other: 1
+    hunger:
+      1: 1
+      other: 1
+    invisibility:
+      1: 1
+      other: 1
+    night_vision:
+      1: 1
+      other: 1
+    regeneration:
+      1: 1
+      2: 1
+      3: 1
+      4: 1
+      other: 1
+    slow:
+      1: 1
+      2: 1
+      other: 1
+    speed:
+      1: 1
+      2: 1
+      other: 1
+    weakness:
+      1: 1
+      2: 1
+      other: 1
+    fire_resistance:
+      1: 1
+      other: 1
+    blindness:
+      1: 1
+      other: 1
